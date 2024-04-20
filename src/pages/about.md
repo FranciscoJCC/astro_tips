@@ -1,5 +1,6 @@
 ---
-title: "My first page"
+layout: "../layouts/Base.astro"
+title: "My first page whit mark down"
 ---
 
 ## Hello world
