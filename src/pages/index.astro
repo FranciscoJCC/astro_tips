@@ -1,8 +1,16 @@
 ---
+import { getCollection } from "astro:content";
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Hero from '../components/Hero.astro';
 import Header from '../components/Header.astro';
+
+/* const allPosts = await Astro.glob("../content/*.md");
+console.log("posts",allPosts); */
+
+//Collections 
+const allTips = await getCollection('tips');
+
 ---
 
 <Layout title="Welcome to Astro.">
@@ -10,12 +18,15 @@ import Header from '../components/Header.astro';
 		<Header title='Bienvenido a mi sitio'/>
 		<Hero />
 		<ul role="list" class="link-card-grid">
-			<Card
-				title="Documentation"
-				time="19/04/2024"
-				tags='javascript'
-			/>
-			
+			{
+				allTips.map((tip) => (
+					<Card
+						title = { tip?.data.title }
+						time = { tip?.data.pubDate }
+						tags = { tip?.data.tags }
+					/>
+				))
+			}
 		</ul>
 	</main>
 </Layout>
