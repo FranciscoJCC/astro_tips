@@ -7,6 +7,7 @@ const tipCollection = defineCollection({
         pubDate: z.string().datetime(),
         image: z.string().optional(),
         tags: z.array(z.string()),
+        slug: z.string()
     }),
 });
 

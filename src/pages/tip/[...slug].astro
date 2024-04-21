@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths(){
+    const tips = await getCollection('tips');
+
+    return tips.map( (tip) => (
+        {
+            params: { slug: tip.slug },
+            props: tip
+        }
+    ));
+}
+
+const tip = Astro.props; 
+const { Content } = await tip.render();
+---
+
+<Content />
