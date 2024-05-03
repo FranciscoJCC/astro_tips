@@ -1,5 +1,7 @@
 ---
 import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import Header from "../../components/Header.tsx";
 
 export async function getStaticPaths(){
     const tips = await getCollection('tips');
@@ -15,5 +17,7 @@ export async function getStaticPaths(){
 const tip = Astro.props; 
 const { Content } = await tip.render();
 ---
-
-<Content />
+<Base title="AstroBuild.tips">
+    <Header title="AstroBuild.tips"/>
+    <Content />
+</Base>
