@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Base from "../../layouts/Base.astro";
 import Header from "../../components/Header.tsx";
+import HeaderTop from "../../components/HeaderTop.tsx"
 import Footer from "../../components/Footer.vue";
 import Social from "../../components/Social.svelte";
 
@@ -20,6 +21,7 @@ const tip = Astro.props;
 const { Content } = await tip.render();
 ---
 <Base title="AstroBuild.tips">
+    <HeaderTop client:load/>
     <Header title="AstroBuild.tips"/>
     <Content/>
     <Footer>
