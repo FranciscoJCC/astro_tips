@@ -1,5 +1,5 @@
 ---
-title: "Hello astro"
+title: "Hello astro, componente reutilizable"
 pubDate: 2025-05-05
 description: "Description complete 2"
 image: "https://picsum.photos/640/480?grayscale"

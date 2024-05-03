@@ -1,5 +1,5 @@
 ---
-title: "Hello world"
+title: "Hello world, ejemplo de una tarea"
 pubDate: 2024-05-06
 description: "Description complete"
 image: "https://picsum.photos/640/480?grayscale"

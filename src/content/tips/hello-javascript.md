@@ -1,5 +1,5 @@
 ---
-title: "Hello javascript"
+title: "Hello javascript, detalle del tip"
 pubDate: 2024-05-06
 description: "Description complete"
 image: "https://picsum.photos640/480?grayscale"
